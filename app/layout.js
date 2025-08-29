@@ -1,14 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Tajawal } from 'next/font/google';
+import { Rubik } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+    // For variable font (recommended for optimal performance)
+    
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+    // If not using a variable font, specify weights
+    const tajawal = Tajawal({
+       weight: ['200', '300', '400', '500', '700', '800', '900'],
+       subsets: ['arabic', 'latin'],
+     });
+
+     const rubik = Rubik({
+  subsets: ["arabic"], // أو ["latin", "arabic"] إذا تحتاج الاثنين
+  weight: ["300", "900"],
+  
 });
 
 export const metadata = {
@@ -18,8 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en"  className={`${tajawal.variable} ${rubik.variable}`}  >
+      <body >
         {children}
       </body>
     </html>
