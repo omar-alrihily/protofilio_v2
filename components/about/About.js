@@ -21,18 +21,18 @@ export default function About() {
       
       
 
-      <div className="relative z-10 flex flex-col items-center space-y-12 space-x-6 mt-18  ">
+      <div className="relative z-10 flex flex-col items-center space-y-12 space-x-6 mt-18   ">
       <div className="relative flex justify-center items-center mt-16 mb-20">
-  <div className="absolute w-72 h-72 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full blur-2xl -z-10"></div>
+  <div className="absolute w-62 h-62 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full blur-2xl -z-10"></div>
   <img
     src="/omar_logo3.svg"
     alt="Logo"
-    className="opacity-30 w-50 md:w-60 h-auto drop-shadow-lg transition-transform duration-500 hover:scale-105"
+    className="opacity-40 w-50 md:w-60 h-auto drop-shadow-lg transition-transform duration-500 hover:scale-105"
   />
 </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4  ">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-500 relative">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-600 relative">
             <span
               key={currentIndex}
               className="absolute text-amber-700 opacity-0"

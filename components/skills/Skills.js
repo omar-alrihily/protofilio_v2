@@ -1,50 +1,52 @@
-// components/Skills.jsx
+"use client";
+import { motion } from "framer-motion";
 import { Code, Database, Layout, Server } from "lucide-react";
 
 const skills = [
-  {
-    icon: <Code className="w-8 h-8 text-orange-500" />,
-    title: "Frontend",
-    description: "React, Next.js, Tailwind, TypeScript, UI/UX",
-  },
-  {
-    icon: <Server className="w-8 h-8 text-orange-500" />,
-    title: "Backend",
-    description: "Node.js, Express, REST APIs, Authentication",
-  },
-  {
-    icon: <Database className="w-8 h-8 text-orange-500" />,
-    title: "Databases",
-    description: "MongoDB, PostgreSQL, MySQL, Prisma ORM",
-  },
-  {
-    icon: <Layout className="w-8 h-8 text-orange-500" />,
-    title: "Other",
-    description: "Git/GitHub, Docker, CI/CD, Cloud Deployment",
-  },
+  { icon: <Code className="w-8 h-8 text-amber-400" />, title: "Frontend", description: "React, Next.js, Tailwind, TypeScript, UI/UX" },
+  { icon: <Server className="w-8 h-8 text-amber-400" />, title: "Backend", description: "Node.js, Express, REST APIs, Authentication" },
+  { icon: <Database className="w-8 h-8 text-amber-400" />, title: "Databases", description: "MongoDB, PostgreSQL, MySQL, Prisma ORM" },
+  { icon: <Layout className="w-8 h-8 text-amber-400" />, title: "Other", description: "Git/GitHub, Docker, CI/CD, Cloud Deployment" },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-16  w-full" style={{ background: "#36688d" }} > 
+    <section className="py-16 w-full" style={{ background: "#36688d" }}>
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-orange-100 dark:text-white mb-12">
-          مهاراتي
-        </h2>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4" >
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 hover:shadow-xl transition"
+        <h2 className="text-3xl font-bold text-orange-100 mb-12">مهاراتي</h2>
+        <p className="text-gray-300 mb-12">
+          هذه بعض المهارات التي أمتلكها في مجال تطوير الويب. أعمل باستمرار على تحسين مهاراتي وتعلم تقنيات جديدة.
+        </p>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {skills.map((skill, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 50, scale: 0.6 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ type: "spring", stiffness: 20, delay: i * 0.1 }}
+              className="p-6 rounded-2xl shadow-md hover:shadow-xl"
+              style={{ background: "#f7ebd3" }}
             >
-              <div className="flex justify-center mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                {skill.title}
-              </h3>
-              <p className="mt-2 text-gray-500 dark:text-gray-400 text-sm">
-                {skill.description}
-              </p>
-            </div>
+              {/* العنوان والايقونة في نفس السطر */}
+              <div className="flex items-center justify-start mb-5 gap-3">
+                <div>{skill.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-600">{skill.title}</h3>
+              </div>
+
+              {/* الوصف على شكل تاقز */}
+              <div className="flex flex-wrap gap-2 justify-start ">
+                {skill.description.split(",").map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gray-500  text-gray-100 text-xs px-2 py-1 rounded-full"
+                  >
+                    {tag.trim()}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
