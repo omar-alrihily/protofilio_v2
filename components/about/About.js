@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 
 
+
+
 export default function About() {
   const rotatingWords = ["النجاح", "القمة", "الإنجاز"];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,13 +19,13 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative w-full h-full  overflow-hidden flex justify-center  text-center px-6 " style={{ background: "#f7ebd3" }}>
+    <section className="relative w-full h-full  overflow-hidden flex justify-center  text-center px-6 " style={{ background: "#f7e7cd" }}>
       
       
 
       <div className="relative z-10 flex flex-col items-center space-y-12 space-x-6 mt-18   ">
       <div className="relative flex justify-center items-center mt-16 mb-20">
-  <div className="absolute w-62 h-62 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full blur-2xl -z-10"></div>
+       <div className="absolute w-62 h-62 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur-2xl -z-10"></div>
   <img
     src="/omar_logo3.svg"
     alt="Logo"
