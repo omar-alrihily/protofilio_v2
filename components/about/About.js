@@ -19,32 +19,32 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative w-full h-full  overflow-hidden flex justify-center  text-center px-6 " style={{ background: "#f7e7cd" }}>
+    <section className="relative w-full h-full  overflow-hidden flex justify-center  text-center px-6 " style={{ background: "#36688d" }}>
       
       
 
-      <div className="relative z-10 flex flex-col items-center space-y-12 space-x-6 mt-18   ">
-      <div className="relative flex justify-center items-center mt-16 mb-20">
-       <div className="absolute w-62 h-62 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur-2xl -z-10"></div>
+      <div className="relative z-10 flex flex-col items-center space-y-12 space-x-6    ">
+      <div className="relative flex justify-center items-center mt-6 mb-20">
+       
   <img
-    src="/omar_logo3.svg"
+    src="/LOG2.png"
     alt="Logo"
-    className="opacity-40 w-50 md:w-60 h-auto drop-shadow-lg transition-transform duration-500 hover:scale-105"
+    className="opacity-90 w-60 md:w-70 h-auto drop-shadow-lg transition-transform duration-500 hover:scale-105"
   />
 </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4  ">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-600 relative">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 relative">
             <span
               key={currentIndex}
-              className="absolute text-amber-700 opacity-0"
+              className="absolute text-gray-300 opacity-0 font-sans "
               style={{
                 animation: "fallWord 3.0s ease forwards",
               }}
             >
               {rotatingWords[currentIndex]}
             </span>
-            <span className="ml-23 md:ml-20 lg:ml-35 ">انطلق بفكرتك إلى</span>
+            <span className="ml-23 md:ml-20 lg:ml-35 font-sans  ">انطلق بفكرتك إلى</span>
           </p>
         </div>
         

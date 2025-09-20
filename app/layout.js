@@ -1,5 +1,5 @@
-import { Tajawal } from 'next/font/google';
-import { Rubik } from "next/font/google";
+import { Tajawal , Handjet } from 'next/font/google';
+
 import "./globals.css";
 
     // For variable font (recommended for optimal performance)
@@ -11,11 +11,7 @@ import "./globals.css";
        subsets: ['arabic', 'latin'],
      });
 
-     const rubik = Rubik({
-  subsets: ["arabic"], // أو ["latin", "arabic"] إذا تحتاج الاثنين
-  weight: ["300", "900"],
-  
-});
+    const handjet = Handjet({ subsets: ['latin'], variable: '--font-handjet' })
 
 export const metadata = {
   title: "Create Next App",
@@ -24,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className={`${tajawal.variable} ${rubik.variable}`}  >
+    <html lang="en"  className={`${tajawal.variable} ${handjet.variable}`}  >
       <body >
         {children}
       </body>

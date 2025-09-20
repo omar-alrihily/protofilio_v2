@@ -3,44 +3,48 @@ import { motion } from "framer-motion";
 import { Code, Database, Layout, Server } from "lucide-react";
 
 const skills = [
-  { icon: <Code className="w-8 h-8 text-amber-400" />, title: "Frontend", description: "React, Next.js, Tailwind, TypeScript, UI/UX" },
-  { icon: <Server className="w-8 h-8 text-amber-400" />, title: "Backend", description: "Node.js, Express, REST APIs, Authentication" },
-  { icon: <Database className="w-8 h-8 text-amber-400" />, title: "Databases", description: "MongoDB, PostgreSQL, MySQL, Prisma ORM" },
-  { icon: <Layout className="w-8 h-8 text-amber-400" />, title: "Other", description: "Git/GitHub, Docker, CI/CD, Cloud Deployment" },
+  { icon: <Code className="w-8 h-8 text-amber-300" />, title: "الواجهات الأمامية", description: "React, Next.js, Tailwind, TypeScript, UI/UX" },
+  { icon: <Server className="w-8 h-8 text-amber-300" />, title: "الخلفيات", description: "Node.js, Express, REST APIs, Authentication" },
+  { icon: <Database className="w-8 h-8 text-amber-300" />, title: "قواعد البيانات", description: "MongoDB, PostgreSQL, MySQL, Prisma ORM" },
+  { icon: <Layout className="w-8 h-8 text-amber-300" />, title: "أخرى", description: "Git/GitHub, Docker, CI/CD, Cloud Deployment" },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-16 w-full" style={{ background: "#36688d" }}>
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-orange-100 mb-12">مهاراتي</h2>
-        <p className="text-gray-300 mb-12">
-          هذه بعض المهارات التي أمتلكها في مجال تطوير الويب. أعمل باستمرار على تحسين مهاراتي وتعلم تقنيات جديدة.
+    <section className="py-20 w-full" style={{ background: "#36688d" }}>
+      <div className="max-w-6xl mx-auto px-6 text-center text-white">
+        <h2 className="text-4xl font-extrabold tracking-wide mb-6 drop-shadow-[3px_3px_0px_#000]">
+          ✦ مهاراتي ✦
+        </h2>
+        <p className="text-orange-100 mb-12 text-lg">
+          بعض التقنيات والأدوات التي أستخدمها في تطوير الويب، وأسعى دائماً لتعلم المزيد وتطوير نفسي.
         </p>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((skill, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 50, scale: 0.6 }}
+              initial={{ opacity: 0, y: 40, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ type: "spring", stiffness: 20, delay: i * 0.1 }}
-              className="p-6 rounded-2xl shadow-md hover:shadow-xl"
-              style={{ background: "#f7ebd3" }}
+              transition={{ type: "spring", stiffness: 30, delay: i * 0.1 }}
+              className="p-6 rounded-xl border-4 border-amber-300 shadow-[6px_6px_0px_#000] bg-[#f7ebd3] text-right"
+              
             >
-              {/* العنوان والايقونة في نفس السطر */}
-              <div className="flex items-center justify-start mb-5 gap-3">
+              {/* العنوان والايقونة */}
+              <div className="flex items-center justify-end gap-3 mb-5">
+                
+                <h3 className="text-lg font-bold text-gray-800">{skill.title}</h3>
                 <div>{skill.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-600">{skill.title}</h3>
+                
               </div>
 
-              {/* الوصف على شكل تاقز */}
-              <div className="flex flex-wrap gap-2 justify-start ">
+              {/* التاقات */}
+              <div className="flex flex-wrap gap-2 justify-end">
                 {skill.description.split(",").map((tag, idx) => (
                   <span
                     key={idx}
-                    className="bg-gray-500  text-gray-100 text-xs px-2 py-1 rounded-full"
+                    className="px-3 py-1 text-xs font-mono bg-amber-300 text-black border-2 border-black shadow-[2px_2px_0px_#000]"
                   >
                     {tag.trim()}
                   </span>
