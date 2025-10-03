@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Code, Database, Layout, Server } from "lucide-react";
 
 const skills = [
-  { icon: <Code className="w-8 h-8 text-amber-300" />, title: "الواجهات الأمامية", description: "React, Next.js, Tailwind, TypeScript, UI/UX" },
-  { icon: <Server className="w-8 h-8 text-amber-300" />, title: "الخلفيات", description: "Node.js, Express, REST APIs, Authentication" },
-  { icon: <Database className="w-8 h-8 text-amber-300" />, title: "قواعد البيانات", description: "MongoDB, PostgreSQL, MySQL, Prisma ORM" },
-  { icon: <Layout className="w-8 h-8 text-amber-300" />, title: "أخرى", description: "Git/GitHub, Docker, CI/CD, Cloud Deployment" },
+  { icon: <Code className="w-8 h-8 text-[#ffd230]" />, title: "الواجهات الأمامية", description: "React, Next.js, Tailwind, TypeScript, UI/UX" },
+  { icon: <Server className="w-8 h-8 text-[#ffd230]" />, title: "الخلفيات", description: "Node.js, Express, REST APIs, Authentication" },
+  { icon: <Database className="w-8 h-8 text-[#ffd230]" />, title: "قواعد البيانات", description: "MongoDB, PostgreSQL, MySQL, Prisma ORM" },
+  { icon: <Layout className="w-8 h-8 text-[#ffd230]" />, title: "أخرى", description: "Git/GitHub, Docker, CI/CD, Cloud Deployment" },
 ];
 
 export default function Skills() {
@@ -16,8 +16,8 @@ export default function Skills() {
         <h2 className="text-4xl font-extrabold tracking-wide mb-6 drop-shadow-[3px_3px_0px_#000]">
           ✦ مهاراتي ✦
         </h2>
-        <p className="text-orange-100 mb-12 text-lg">
-          بعض التقنيات والأدوات التي أستخدمها في تطوير الويب، وأسعى دائماً لتعلم المزيد وتطوير نفسي.
+        <p className="text-[#ffedd4] mb-12 text-lg">
+          بعض التقنيات والأدوات التي أستخدمها في تطوير الويب، وأسعى دائماً لتعلم المزيد وتطوير نفسي
         </p>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -28,13 +28,13 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ type: "spring", stiffness: 30, delay: i * 0.1 }}
-              className="p-6 rounded-xl border-4 border-amber-300 shadow-[6px_6px_0px_#000] bg-[#f7ebd3] text-right"
+              className="p-6 rounded-xl border-4 border-[#ffd230] shadow-[6px_6px_0px_#000] bg-[#f7ebd3] text-right"
               
             >
               {/* العنوان والايقونة */}
               <div className="flex items-center justify-end gap-3 mb-5">
                 
-                <h3 className="text-lg font-bold text-gray-800">{skill.title}</h3>
+                <h3 className="text-lg font-bold text-[#1e2939]">{skill.title}</h3>
                 <div>{skill.icon}</div>
                 
               </div>
@@ -44,7 +44,7 @@ export default function Skills() {
                 {skill.description.split(",").map((tag, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 text-xs font-mono bg-amber-300 text-black border-2 border-black shadow-[2px_2px_0px_#000]"
+                    className="px-3 py-1 text-xs font-mono bg-[#FFD54F] text-black border-2 border-black shadow-[2px_2px_0px_#000]"
                   >
                     {tag.trim()}
                   </span>
