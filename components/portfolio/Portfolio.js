@@ -30,7 +30,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-20 w-full" style={{ background: "#36688d" }}>
+    <section className="py-20 w-full h-full" style={{ background: "#36688d" }}>
       <div className="max-w-6xl mx-auto px-6 text-center text-white">
         <h2 className="text-4xl font-extrabold tracking-wide mb-6 drop-shadow-[3px_3px_0px_#000]">
           ✦ معرض الأعمال ✦

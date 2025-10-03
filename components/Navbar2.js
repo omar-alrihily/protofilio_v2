@@ -45,8 +45,8 @@ export default function Navbar2() {
     `flex items-center gap-8 px-4 py-1 min-w-[80px] text-sm Tajwal select-none
      ${
        activeButton === id
-         ? "bg-orange-200 border-t-gray-600 border-l-gray-600 border-b-gray-100 border-r-gray-100 shadow-inner"
-         : "bg-orange-100 border-t-white border-l-white border-b-gray-500 border-r-gray-500 shadow"
+         ? "bg-gray-400 border-t-gray-600 border-l-gray-600 border-b-gray-100 border-r-gray-100 shadow-inner"
+         : "bg-gray-300 border-t-white border-l-white border-b-gray-500 border-r-gray-500 shadow"
      }`;
 
   const iconUrls = {
@@ -60,7 +60,7 @@ export default function Navbar2() {
   return (
     <div
       ref={menuRef}
-      className="fixed bottom-0 w-full h-16 bg-orange-100 border-t-2 border-orange-200 border-b-0 border-orange-200 flex items-center justify-between px-4 shadow-2xl z-50"  
+      className="fixed bottom-0 w-full h-16 bg-gray-300 border-t-2 border-gray-400 border-b-0 border-gray-400 flex items-center justify-between px-4 shadow-2xl z-50"  
     >
       {/* الجانب الأيسر: الساعة */}
       <div className="flex items-center gap-2">
@@ -92,12 +92,12 @@ export default function Navbar2() {
 
         {/* قائمة ابدأ */}
         {isStartOpen && (
-          <div className="absolute bottom-11 right-0 w-56  bg-orange-200  flex flex-col"   >
+          <div className="absolute bottom-11 right-0 w-56  bg-gray-300  flex flex-col"   >
             {[
               { id: "about", label: "عني", icon: iconUrls.about },
               { id: "featured", label: "مميز", icon: iconUrls.featured },
               { id: "skills", label: "مهارات", icon: iconUrls.skills },
-              { id: "cta", label: "تواصل", icon: iconUrls.cta }
+              { id: "Contact", label: "تواصل", icon: iconUrls.cta }
             ].map((item) => (
               <button
                 key={item.id}
@@ -132,7 +132,7 @@ export default function Navbar2() {
             <img src={iconUrls.skills} alt="مهارات" className="h-5 w-5 object-contain" />
             
           </button>
-          <button onClick={() => handleClick("cta")} className={buttonStyle("cta")}>
+          <button onClick={() => handleClick("Contact")} className={buttonStyle("Contact")}>
             <span>تواصل</span>
             <img src={iconUrls.cta} alt="تواصل" className="h-5 w-5 object-contain " />
             

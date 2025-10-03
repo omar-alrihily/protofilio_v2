@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import FeaturedCard from "../components/about/FeaturedCard";
 import Skills from "../components/skills/Skills";
 import Portfolio from "../components/portfolio/Portfolio";
+import Contact from "../components/contact/Contact";
+import ServicesSection from "../components/testimonials/ServicesSection";
 
 export default function Home() {
   return (
@@ -29,6 +31,14 @@ export default function Home() {
 
         <section id="Portfolio" className="w-full">
           <Portfolio />
+        </section>
+
+         <section id="Contact" className="w-full">
+          <Contact />
+        </section>
+
+         <section id="Contt" className="w-full">
+          <ServicesSection />
         </section>
 
      

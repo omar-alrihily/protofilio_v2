@@ -1,6 +1,7 @@
 import { Tajawal , Handjet } from 'next/font/google';
 
 import "./globals.css";
+import RetroLoader from "@/components/RetroLoader";
 
     // For variable font (recommended for optimal performance)
     
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${tajawal.variable} ${handjet.variable}`}  >
       <body >
+        <RetroLoader>
         {children}
+        </RetroLoader>
       </body>
     </html>
   );
