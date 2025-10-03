@@ -35,7 +35,7 @@ export default function Contact() {
 
         {/* Window Content */}
         <div className="bg-[#c0c0c0] p-3 sm:p-4 text-sm text-right">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-gray-800">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-[#1e2939]">
             
             <label className="flex flex-col">
               <span className="mb-1">الاسم:</span>

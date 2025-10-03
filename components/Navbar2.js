@@ -45,8 +45,8 @@ export default function Navbar2() {
     `flex items-center gap-8 px-4 py-1 min-w-[80px] text-sm Tajwal select-none
      ${
        activeButton === id
-         ? "bg-gray-400 border-t-gray-600 border-l-gray-600 border-b-gray-100 border-r-gray-100 shadow-inner"
-         : "bg-gray-300 border-t-white border-l-white border-b-gray-500 border-r-gray-500 shadow"
+         ? "bg-[#99a1af] border-t-gray-600 border-l-gray-600 border-b-[#4a5565] border-r-[#f1f5f9] shadow-inner"
+         : "bg-[#d1d5dc] border-t-white border-l-white border-b-[#6a7282] border-r-[#6a7282] shadow"
      }`;
 
   const iconUrls = {
@@ -60,14 +60,14 @@ export default function Navbar2() {
   return (
     <div
       ref={menuRef}
-      className="fixed bottom-0 w-full h-16 bg-gray-300 border-t-2 border-gray-400 border-b-0 border-gray-400 flex items-center justify-between px-4 shadow-2xl z-50"  
+      className="fixed bottom-0 w-full h-16 bg-[#cad5e2] border-t-2 border-[#99a1af] border-b-0 border-[#99a1af] flex items-center justify-between px-4 shadow-2xl z-50"  
     >
       {/* الجانب الأيسر: الساعة */}
       <div className="flex items-center gap-2">
-        <div className="px-3 py-1 text-sm border-2 border-gray-300 bg-gray-100 text-gray-800 font-medium shadow-inner">
+        <div className="px-3 py-1 text-sm border-2 border-[#d1d5dc] bg-[#f3f4f6] text-[#1e2939] font-medium shadow-inner">
           {formattedTime}
         </div>
-        <div className="w-7 h-7 bg-gray-100 border-2 border-gray-100 shadow-inner flex items-center justify-center">
+        <div className="w-7 h-7 bg-[#f3f4f6] border-2 border-[#f3f4f6] shadow-inner flex items-center justify-center">
           <div className="w-1 h-1"></div>
         </div>
         
@@ -92,7 +92,7 @@ export default function Navbar2() {
 
         {/* قائمة ابدأ */}
         {isStartOpen && (
-          <div className="absolute bottom-11 right-0 w-56  bg-gray-300  flex flex-col"   >
+          <div className="absolute bottom-11 right-0 w-56  bg-[#d1d5dc]  flex flex-col"   >
             {[
               { id: "about", label: "عني", icon: iconUrls.about },
               { id: "featured", label: "مميز", icon: iconUrls.featured },
@@ -105,7 +105,7 @@ export default function Navbar2() {
                   handleClick(item.id);
                   setIsStartOpen(false);
                 }}
-                className="flex flex-row-reverse items-center gap-3 px-3 py-2 text-sm text-right hover:bg-blue-600 hover:text-white"
+                className="flex flex-row-reverse items-center gap-3 px-3 py-2 text-sm text-right hover:bg-[#155dfc] hover:text-white"
               >
                 <img src={item.icon} alt={item.label} className="w-5 h-5 object-contain" />
                 <span>{item.label}</span>

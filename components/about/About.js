@@ -28,10 +28,10 @@ export default function About() {
         </div>
 
         <div className="relative flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mt-10">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 relative">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f3f4f6] relative">
             <span
               key={currentIndex}
-              className="absolute text-yellow-400 opacity-0 font-sans"
+              className="absolute text-[#fdc700] opacity-0 font-sans"
               style={{ animation: "fallWord 3s ease forwards" }}
             >
               {rotatingWords[currentIndex]}
@@ -41,7 +41,7 @@ export default function About() {
         </div>
 
         {/* العبارة الجديدة أسفل الجملة الدوّارة */}
-       <p className="mt-24 text-xl md:text-xl lg:text-2xl text-gray-700 font-semibold tracking-wide text-center max-w-xl mx-auto px-6 py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_#000] bg-yellow-100">
+       <p className="mt-24 text-xl md:text-xl lg:text-2xl text-[#364153] font-semibold tracking-wide text-center max-w-xl mx-auto px-6 py-4 border-4 border-black rounded-xl shadow-[4px_4px_0px_#000] bg-[#fef9c2]">
   من البدايات البسيطة للتكنولوجيا إلى عالم سريع يتغير كل ثانية، أعمل على بناء مواقع وأنظمة ذكاء اصطناعي تتكيف وتبتكر لتجارب رقمية مميزة.
 </p>
 
