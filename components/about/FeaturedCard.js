@@ -1,7 +1,7 @@
 // components/SeparatedCard.jsx
 export default function SeparatedCard() {
   return (
-<div className="relative w-full h-full flex flex-col lg:flex-row items-center lg:items-start justify-center px-6 py-78 gap-10 lg:py-40  lg:mt-36" style={{ background: "#36688d" }}>
+<div className="relative w-full  flex flex-col lg:flex-row items-center lg:items-start justify-center px-6 py-78 gap-10 lg:py-40  lg:mt-36" style={{ background: "#36688d" }}>
 
   {/* الصورة مستقلة، تظهر فقط على الشاشات الكبيرة */}
   <div className="hidden lg:block flex-shrink-0 w-1/3 h-96 overflow-hidden lg:top-20px mt-10 relative glitch">

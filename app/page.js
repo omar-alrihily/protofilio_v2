@@ -25,9 +25,17 @@ export default function Home() {
           <FeaturedCard />
         </section>
 
-        <section id="skills" className="w-full">
+        
+
+         <section id="Contt" className="w-full">
+          <ServicesSection />
+        </section>
+
+         <section id="skills" className="w-full">
           <Skills />
         </section>
+
+         
 
         <section id="Portfolio" className="w-full">
           <Portfolio />
@@ -37,9 +45,7 @@ export default function Home() {
           <Contact />
         </section>
 
-         <section id="Contt" className="w-full">
-          <ServicesSection />
-        </section>
+        
 
      
       </main>

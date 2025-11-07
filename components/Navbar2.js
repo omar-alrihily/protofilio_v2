@@ -60,7 +60,7 @@ export default function Navbar2() {
   return (
     <div
       ref={menuRef}
-      className="fixed bottom-0 w-full h-16 bg-[#cad5e2] border-t-2 border-[#99a1af] border-b-0 border-[#99a1af] flex items-center justify-between px-4 shadow-2xl z-50"  
+      className="fixed bottom-0 w-full h-16 bg-[#d1d5dc] border-t-2 border-[#99a1af] border-b-0 border-[#99a1af] flex items-center justify-between px-4 shadow-2xl z-50"  
     >
       {/* الجانب الأيسر: الساعة */}
       <div className="flex items-center gap-2">

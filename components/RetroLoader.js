@@ -22,8 +22,8 @@ export default function RetroSplash({ children }) {
             جار تحميل تجربتك الرقمية...
           </p>
           {/* شريط تقدم بسيط */}
-          <div className="w-full bg-[#4a5565]   h-5">
-            <div className="bg-blue-600 h-full animate-pulse w-3/4" />
+          <div className="w-full  bg-[#155dfc]    h-5">
+            <div className=" bg-[#4a5565] animate-pulse w-1/4 h-full  " />
           </div>
         </div>
       </div>

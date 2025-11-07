@@ -1,91 +1,99 @@
 "use client";
-import { useState } from "react";
+import { FaLinkedin, FaGithub, FaTwitter, FaPhone, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("تم إرسال:", formData);
-  };
-
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#36688d] px-4">
-      <div className="w-full max-w-lg border-2 border-[#808080] shadow-[4px_4px_0px_#404040]">
-        
-        {/* Title Bar */}
-        <div className="flex items-center justify-between bg-[#000080] text-white px-2 py-1 text-xs sm:text-sm font-bold">
-          <div className="flex gap-1">
-            <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">
-              _
-            </button>
-            <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">
-              □
-            </button>
-            <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">
-              X
-            </button>
-          </div>
-          <span>📨 تواصل معي</span>
+    <section className="relative py-20 md:py-32 bg-[#36688d] text-[#fff7e0] overflow-hidden" >
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+        {/* العنوان */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-[4px_4px_0px_#1e2939] text-[#ffd230] tracking-tight">
+            :: تواصل معي ::
+          </h2>
+          <p className="text-[#ffeec0] text-lg max-w-3xl mx-auto leading-relaxed mt-4 border-b-2 border-dashed border-[#ffeec0] inline-block pb-2">
+            هذه نافذة المعلومات الخاصة بي، يمكنك التواصل معي مباشرة عبر الوسائل أدناه
+          </p>
         </div>
 
-        {/* Window Content */}
-        <div className="bg-[#c0c0c0] p-3 sm:p-4 text-sm text-right">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-[#1e2939]">
-            
-            <label className="flex flex-col">
-              <span className="mb-1">الاسم:</span>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="bg-white border-2 border-[#808080] px-2 py-1 text-right focus:outline-none w-full"
-              />
-            </label>
+        {/* النافذة */}
+        <div className="flex justify-center mb-16">
+          <div className="w-full max-w-lg border-2 border-[#808080] shadow-[4px_4px_0px_#404040]">
 
-            <label className="flex flex-col">
-              <span className="mb-1">البريد الإلكتروني:</span>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="bg-white border-2 border-[#808080] px-2 py-1 text-right focus:outline-none w-full"
-              />
-            </label>
-
-            <label className="flex flex-col">
-              <span className="mb-1">الرسالة:</span>
-              <textarea
-                name="message"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                className="bg-white border-2 border-[#808080] px-2 py-1 text-right focus:outline-none w-full"
-              />
-            </label>
-
-            <div className="flex flex-col sm:flex-row justify-end gap-2 mt-4">
-              <button
-                type="submit"
-                className="bg-[#c0c0c0] border-2 border-[#808080] px-4 py-1 active:border-t-white active:border-l-white active:border-b-black active:border-r-black"
-              >
-                إرسال
-              </button>
-              <button
-                type="reset"
-                className="bg-[#c0c0c0] border-2 border-[#808080] px-4 py-1 active:border-t-white active:border-l-white active:border-b-black active:border-r-black"
-              >
-                إلغاء
-              </button>
+            {/* الشريط العلوي */}
+            <div className="flex items-center justify-between bg-[#000080] text-white px-2 py-1 text-xs sm:text-sm font-bold">
+              <div className="flex gap-1">
+                <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">_</button>
+                <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">□</button>
+                <button className="bg-[#c0c0c0] text-black w-6 h-6 flex items-center justify-center border border-[#808080]">X</button>
+              </div>
+              <span>📇 معلومات التواصل</span>
             </div>
-          </form>
+
+            {/* محتوى النافذة */}
+            <div className="bg-[#c0c0c0] p-5 sm:p-6 text-sm text-right text-[#1e2939]">
+              <div className="flex flex-col gap-4" dir="rtl">
+
+                <div className="flex items-center justify-between border-b border-[#808080] pb-2">
+                  <span className="font-bold">📞 الهاتف:</span>
+                  <span dir="ltr">+966 5XXXXXXXX</span>
+                </div>
+
+                <div className="flex items-center justify-between border-b border-[#808080] pb-2">
+                  <span className="font-bold">✉️ البريد الإلكتروني:</span>
+                  <span>example@email.com</span>
+                </div>
+
+                <div className="flex items-center justify-between border-b border-[#808080] pb-2">
+                  <span className="font-bold">💼 لينكدإن:</span>
+                  <a
+                    href="https://linkedin.com/in/yourprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 hover:underline"
+                  >
+                    linkedin.com/in/yourprofile
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between border-b border-[#808080] pb-2">
+                  <span className="font-bold">🐙 غيتهاب:</span>
+                  <a
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 hover:underline"
+                  >
+                    github.com/yourusername
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="font-bold">🐦 تويتر:</span>
+                  <a
+                    href="https://twitter.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 hover:underline"
+                  >
+                    twitter.com/yourusername
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* أيقونات صغيرة تحت النافذة */}
+        <div className="flex justify-center items-center gap-6 text-[#fff7e0] text-xl">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          <a href="mailto:example@email.com"><FaEnvelope /></a>
+          <a href="tel:+9665XXXXXXXX"><FaPhone /></a>
+        </div>
+
       </div>
     </section>
   );

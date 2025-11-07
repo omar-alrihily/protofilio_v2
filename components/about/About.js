@@ -14,7 +14,7 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative w-full h-full overflow-hidden flex flex-col justify-center text-center px-6" style={{ background: "#36688d" }}>
+    <section className="relative w-full  overflow-hidden flex flex-col justify-center text-center px-6" style={{ background: "#36688d" }}>
       <div className="relative z-10 flex flex-col items-center space-y-8">
         <div className="relative flex justify-center items-center mt-6 mb-8 glitch-container">
           <img

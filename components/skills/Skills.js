@@ -28,7 +28,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ type: "spring", stiffness: 30, delay: i * 0.1 }}
-              className="p-6 rounded-xl border-4 border-[#ffd230] shadow-[6px_6px_0px_#000] bg-[#f7ebd3] text-right"
+              className="p-6 rounded-xl border-4 border-[#ffd230] shadow-[6px_6px_0px_#000] bg-[#fff7e0] text-right"
               
             >
               {/* العنوان والايقونة */}

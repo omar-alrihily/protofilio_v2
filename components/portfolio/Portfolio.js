@@ -3,29 +3,18 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "موقع شخصي",
-    description: "تصميم وتطوير موقع شخصي تفاعلي باستخدام Next.js وTailwind.",
-    image: "/projects/personal-site.png",
-    link: "#",
+    title: " منصة مرغوب",
+    description: "منصة عمل حر تجمع بين المستقلين والعملاء في نفس المدينة",
+    image: "/Marghob.png",
+    link: "https://marghob.net/",
   },
   {
-    title: "لوحة تحكم",
-    description: "بناء Dashboard متكامل مع REST APIs وواجهة سهلة الاستخدام.",
-    image: "/projects/dashboard.png",
-    link: "#",
+    title: "منصة تقدير  ",
+    description: "منصة  ذكاء اصطناعي لتقدير أسعار السيارات المستعملة في السوق السعودي",
+    image: "/Tagdeer.png",
+    link: "https://saudi-cars-b1m6.onrender.com/",
   },
-  {
-    title: "تطبيق تجارة إلكترونية",
-    description: "تطوير منصة بيع وشراء بواجهة حديثة وربط مع بوابات الدفع.",
-    image: "/projects/ecommerce.png",
-    link: "#",
-  },
-  {
-    title: "مدونة تقنية",
-    description: "مدونة لمشاركة المقالات التقنية مع دعم Markdown والبحث.",
-    image: "/projects/blog.png",
-    link: "#",
-  },
+
 ];
 
 export default function Portfolio() {
@@ -39,7 +28,7 @@ export default function Portfolio() {
           بعض المشاريع التي عملت عليها، من مواقع شخصية إلى تطبيقات تفاعلية.
         </p>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -60,12 +49,15 @@ export default function Portfolio() {
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-700 mb-4">{project.description}</p>
-                <a
-                  href={project.link}
-                  className="inline-block px-4 py-2 bg-amber-300 text-black border-2 border-black shadow-[2px_2px_0px_#000] text-sm font-mono hover:translate-y-[-2px] transition-transform"
-                >
-                  مشاهدة المشروع
-                </a>
+               <a
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block px-4 py-2 bg-amber-300 text-black border-2 border-black shadow-[2px_2px_0px_#000] text-sm font-mono hover:translate-y-[-2px] transition-transform"
+>
+  مشاهدة المشروع
+</a>
+
               </div>
             </motion.div>
           ))}
