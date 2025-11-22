@@ -36,49 +36,39 @@ export default function Contact() {
 
                 <div className="flex items-center justify-between border-b border-[#808080] pb-2">
                   <span className="font-bold">📞 الهاتف:</span>
-                  <span dir="ltr">+966 5XXXXXXXX</span>
+                  <span dir="ltr">+966 549262671</span>
                 </div>
 
                 <div className="flex items-center justify-between border-b border-[#808080] pb-2">
-                  <span className="font-bold">✉️ البريد الإلكتروني:</span>
-                  <span>example@email.com</span>
+                  <span className="font-bold"><FaEnvelope /> البريد الإلكتروني</span>
+                  <span>omar.8260@gmail.com</span>
                 </div>
 
                 <div className="flex items-center justify-between border-b border-[#808080] pb-2">
                   <span className="font-bold">💼 لينكدإن:</span>
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/omar-alrehaili/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-700 hover:underline"
                   >
-                    linkedin.com/in/yourprofile
+                    linkedin.com/in/omar-alrehaili
                   </a>
                 </div>
 
                 <div className="flex items-center justify-between border-b border-[#808080] pb-2">
-                  <span className="font-bold">🐙 غيتهاب:</span>
+                  <span className="font-bold"><FaGithub /><p>github</p></span>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/omar-alrihily"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-700 hover:underline"
                   >
-                    github.com/yourusername
+                    github.com/omar-alrihily
                   </a>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <span className="font-bold">🐦 تويتر:</span>
-                  <a
-                    href="https://twitter.com/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline"
-                  >
-                    twitter.com/yourusername
-                  </a>
-                </div>
+             
 
               </div>
             </div>
@@ -86,13 +76,7 @@ export default function Contact() {
         </div>
 
         {/* أيقونات صغيرة تحت النافذة */}
-        <div className="flex justify-center items-center gap-6 text-[#fff7e0] text-xl">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-          <a href="mailto:example@email.com"><FaEnvelope /></a>
-          <a href="tel:+9665XXXXXXXX"><FaPhone /></a>
-        </div>
+        
 
       </div>
     </section>
