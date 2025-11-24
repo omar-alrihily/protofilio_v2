@@ -51,7 +51,6 @@ export default function Home() {
       </main>
 
       {/* Footer دائمًا في الأسفل */}
-      <Footer />
       
       
     </div>
